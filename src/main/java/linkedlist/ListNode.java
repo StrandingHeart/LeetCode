@@ -5,8 +5,8 @@ package linkedlist;
  * @Date 2021/2/22 23:15
  */
 public class ListNode {
-    private int val;
-    private ListNode next;
+    int val;
+    ListNode next;
 
     public ListNode() {
     }
@@ -34,5 +34,13 @@ public class ListNode {
 
     public void setNext(ListNode next) {
         this.next = next;
+    }
+
+    @Override
+    public String toString() {
+        return "ListNode{" +
+                "val=" + val +
+                ", next=" + next +
+                '}';
     }
 }
