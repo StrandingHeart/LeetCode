@@ -43,4 +43,15 @@ public class ListNode {
                 ", next=" + next +
                 '}';
     }
+
+    public static ListNode re1234(){
+        ListNode l1 = new ListNode(1);
+        ListNode l2 = new ListNode(2);
+        ListNode l3 = new ListNode(3);
+        ListNode l4 = new ListNode(4);
+        l3.setNext(l4);
+        l2.setNext(l3);
+        l1.setNext(l2);
+        return l1;
+    }
 }

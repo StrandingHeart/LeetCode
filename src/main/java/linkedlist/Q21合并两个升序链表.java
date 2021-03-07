@@ -4,11 +4,13 @@ package linkedlist;
  * @Author zhangyong
  * @Date 2021/3/3 22:24
  */
-public class Question21 {
+public class Q21合并两个升序链表 {
 
     /**
      * 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
      *
+     *
+     * 解题思路 两个链表都不为空，然后往新的链表加节点，当一个链表为空时代表遍历结束，此时将剩下的加到新链表就行了
      */
 
     public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
