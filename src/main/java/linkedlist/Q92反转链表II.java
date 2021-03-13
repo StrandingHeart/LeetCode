@@ -13,22 +13,22 @@ public class Q92反转链表II {
      * 示例:
      * 输入: 1->2->3->4->5->NULL, m = 2, n = 4
      * 输出: 1->4->3->2->5->NULL
-     *
-     * 解题思路：这种要注意不要重复节点位置，即链经过不重复。把经过的节点放到最前面这样经过[left,right]部分就是反转的了
+     * <p>
+     * 解题思路：这种要注意不要重复节点位置，即链经过不重复。穿针引线把经过的节点放到最前面这样经过[left,right]部分就是反转的了
      */
     public static ListNode reverseBetween(ListNode head, int left, int right) {
         ListNode res = new ListNode(-1);
         res.next = head;
         ListNode pre = res;
         int tmpLeft = left;
-        while (left > 1 ){
+        while (left > 1) {
             left--;
             pre = pre.next;
         }
         ListNode cur = pre.next;
-        int tmp = right-tmpLeft;
+        int tmp = right - tmpLeft;
         ListNode cNext;
-        while (tmp > 0){
+        while (tmp > 0) {
             tmp--;
             cNext = cur.next;
             cur.next = cNext.next;
