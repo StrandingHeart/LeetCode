@@ -15,6 +15,7 @@ public class Q109有序链表转换二叉搜索树 {
     }
 
     TreeNode createNode(ListNode head, ListNode tail) {
+        // 当头==尾时，说明当前节点下面没有子树了。
         if (head == tail) {
             return null;
         }
