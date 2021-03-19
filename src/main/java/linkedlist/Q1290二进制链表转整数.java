@@ -8,6 +8,7 @@ public class Q1290二进制链表转整数 {
 
 
     /**
+     * 1011  -》 11
      * 先反转，到pre节点，然后遍历 按照2进制进行乘 加 就行了
      * @param head
      * @return
