@@ -2,7 +2,7 @@ package offer;
 
 
 /**
- * @author zhangyong05
+ * @author zhangyong
  * Created on 2021-03-23 11:33
  */
 public class 剑指Offer07重建二叉树 {

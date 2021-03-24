@@ -2,7 +2,7 @@ package labuladong;
 
 /**
  * @Author zhangyong
- * @Date 2021/3/13 13:38
+ * @Date 2021/3/13
  */
 public class TreeNode {
     int val;

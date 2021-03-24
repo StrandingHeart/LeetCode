@@ -1,8 +1,8 @@
 package offer;
 
 /**
- * @author zhangyong05
- * Created on 2021-03-23 20:22
+ * @author zhangyong
+ * Created on 2021-03-23
  */
 public class 剑指Offer10I斐波那契数列 {
 

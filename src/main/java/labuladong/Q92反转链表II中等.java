@@ -2,8 +2,8 @@ package labuladong;
 
 
 /**
- * @author zhangyong05
- * Created on 2021-03-22 17:07
+ * @author zhangyong
+ * Created on 2021-03-22
  */
 public class Q92反转链表II中等 {
 
