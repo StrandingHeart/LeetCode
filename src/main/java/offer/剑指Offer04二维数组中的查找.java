@@ -32,6 +32,7 @@ public class 剑指Offer04二维数组中的查找 {
     //0 <= m <= 1000
 
     /**
+     * 思路，二分查找
      * @param matrix
      * @param target
      * @return
