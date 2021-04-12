@@ -11,18 +11,24 @@ public class Q450删除二叉搜索树中的节点 {
             return null;
         }
         if (root.val == key){
-            // 找到要删除的节点， 当左右子树为空的时候返回null，就是删除当前节点，否则哪个不空返回哪个。
-            if (root.left == null){
+            if (root.left==null) {
+                // 情况1，欲删除节点无左子
                 return root.right;
             }
-            if (root.right == null){
+            if (root.right==null) {
+                // 情况2，欲删除节点无右子
                 return root.left;
             }
-            // 左右子树都有的话，就取右子树的最左子树。
-            TreeNode min = min(root.right);
-            // 当前节点值为右子树的最左子树(待删除)值，然后将右子树的最左子树(叶子节点)删除
-            root.val = min.val;
-            root.right = deleteNode(root.right,min.val);
+            // 情况3，欲删除节点左右子都有
+            TreeNode node = root.right;
+            // 寻找欲删除节点右子树的最左节点
+            while (node.left!=null){
+                node = node.left;
+            }
+            // 将欲删除节点的左子树成为其右子树的最左节点的左子树
+            node.left = root.left;
+            // 欲删除节点的右子顶替其位置，节点被删除
+            root = root.right;
         }else if (root.val > key){
             root.left = deleteNode(root.left,key);
         }else {

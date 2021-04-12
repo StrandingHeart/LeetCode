@@ -4,7 +4,7 @@ package labuladong;
  * @author zhangyong
  * Created on 2021-03-30
  */
-public class Q700二叉搜索树种的搜索 {
+public class Q700二叉搜索树中的搜索 {
     TreeNode res = null;
 
     /**
@@ -30,7 +30,7 @@ public class Q700二叉搜索树种的搜索 {
     }
 
     public static void main(String[] args) {
-        Q700二叉搜索树种的搜索 s = new Q700二叉搜索树种的搜索();
+        Q700二叉搜索树中的搜索 s = new Q700二叉搜索树中的搜索();
         TreeNode root = new TreeNode(4);
         TreeNode root1 = new TreeNode(2);
         TreeNode root2 = new TreeNode(7);

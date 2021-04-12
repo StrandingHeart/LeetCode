@@ -4,7 +4,7 @@ package labuladong;
  * @author zhangyong
  * Created on 2021-03-29
  */
-public class Q230二叉搜索树种第K小的元素 {
+public class Q230二叉搜索树中第K小的元素 {
 
     int res = 0;
     int rank = 0;
