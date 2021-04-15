@@ -30,6 +30,8 @@ class Node {
     int val;
     Node next;
     Node random;
+    Node left;
+    Node right;
     public Node prev;
     public Node child;
 

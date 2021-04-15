@@ -55,6 +55,14 @@ public class 剑指Offer34二叉树中和为某一值的路径 {
         }
         find(root.left,sum);
         find(root.right,sum);
+        //              5
+        //             / \
+        //            4   8
+        //           /   / \
+        //          11  13  4
+        //         /  \    / \
+        //        7    2  5   1
+        // 到头了，开始回溯。将节点去掉 比如最后一行到7了，代码就过了上面的两个dp，到了这里，将7删除然后回溯到该执行right，入栈2
         inner.remove(inner.size()-1);
     }
 
