@@ -47,6 +47,7 @@ public class 剑指Offer40最小的k个数 {
     public int part(int[] arr,int left,int right){
         int var = arr[right];
         int i = left;
+        // 原地排序，不断将左边置换成比 var小的
         for (int j = left; j < right; j++) {
             if (arr[j]<var){
                 int tmp = arr[i];
