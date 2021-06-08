@@ -27,6 +27,7 @@ public class Q82删除排序链表中的重复元素II {
         ListNode slow;
         ListNode res = cur;
         ListNode deleted = head;
+        // flag设置为了防止head头节点处相同误删
         boolean flag = false;
         while (cur.next!=null&&cur.next.next!=null){
             slow = cur.next;

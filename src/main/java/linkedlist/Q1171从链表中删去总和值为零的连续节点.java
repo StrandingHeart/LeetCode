@@ -22,7 +22,7 @@ public class Q1171从链表中删去总和值为零的连续节点 {
      * @param head
      * @return
      */
-    public ListNode removeZeroSumSublists(ListNode head) {
+    public static ListNode removeZeroSumSublists(ListNode head) {
         if (head == null){
             return null;
         }
@@ -41,5 +41,19 @@ public class Q1171从链表中删去总和值为零的连续节点 {
             cur.next = map.get(sum).next;
         }
         return res.next;
+    }
+    public static void main(String[] args) {
+        ListNode l1 = new ListNode(1);
+        ListNode l2 = new ListNode(2);
+        ListNode l3 = new ListNode(-1);
+        ListNode l4 = new ListNode(-2);
+        ListNode l5 = new ListNode(5);
+        ListNode l6 = new ListNode(6);
+        l5.setNext(l6);
+        l4.setNext(l5);
+        l3.setNext(l4);
+        l2.setNext(l3);
+        l1.setNext(l2);
+        System.out.println(removeZeroSumSublists(l1));
     }
 }

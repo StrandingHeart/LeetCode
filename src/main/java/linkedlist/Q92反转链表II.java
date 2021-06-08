@@ -37,7 +37,6 @@ public class Q92反转链表II {
 
         }
         return res.next;
-
     }
 
     public static void main(String[] args) {

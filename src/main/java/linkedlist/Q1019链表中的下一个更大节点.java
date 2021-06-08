@@ -1,7 +1,9 @@
 package linkedlist;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
 
 /**
  * @Author zhangyong
@@ -23,7 +25,7 @@ public class Q1019链表中的下一个更大节点 {
      * @param head
      * @return
      */
-    public int[] nextLargerNodes(ListNode head) {
+    public int[] nextLargerNodes2(ListNode head) {
         if (head == null){
             return new int[]{0};
         }
@@ -53,4 +55,42 @@ public class Q1019链表中的下一个更大节点 {
         }
         return arr;
     }
+
+    public int[] nextLargerNodes(ListNode head) {
+        if (head == null){
+            return new int[]{0};
+        }
+        List<Integer> list = new ArrayList<>();
+        while (head!=null){
+            list.add(head.val);
+            head = head.next;
+        }
+        int[] res = new int[list.size()];
+        Stack<Integer> stack = new Stack<>();
+        for (int i = 0; i < list.size(); i++) {
+            // 4,1,7,3,5
+            while (!stack.isEmpty() && list.get(stack.peek())<list.get(i)){
+                // 栈不为空，栈顶小于当前值。 栈里是 4，1 当前是7 那么1出栈(1在数组中的索引是1)，设置1的索引对应的下一个最大值为7。
+                // 继续循环，栈里是4，当前是7 那么4出栈(4在数组中的索引是0)，设置0的索引对应的下一个最大值为7然后栈空或者下一个栈顶值小于7打破循环
+                // 如果没有更大值就是默认值的0，如果数组是  9,1,7,3,5 那么9肯定不会出栈，9的索引0也不会被赋值
+                Integer index = stack.pop();
+                res[index] = list.get(i);
+            }
+            stack.push(i);
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+        Q1019链表中的下一个更大节点 s = new Q1019链表中的下一个更大节点();
+        List<Integer> list = new ArrayList<>();
+        list.add(4);
+        list.add(1);
+        list.add(7);
+        list.add(3);
+        list.add(5);
+        // 4,1,7,3,5
+//        System.out.println(Arrays.toString(s.nextLargerNodes2(list)));
+    }
+
 }
